@@ -8,7 +8,7 @@
     </div>
 
     <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-      <li class="ms-3"><a class="hello" href="#"><img src="https://img.icons8.com/external-bearicons-glyph-bearicons/64/000000/external-faq-frequently-asked-questions-faq-bearicons-glyph-bearicons-10.png"/></a></li>
+      <li class="ms-3"><a class="hello" href="https://101blockchains.com/cryptocurrency-faqs/" target="_blank"><img src="https://img.icons8.com/external-bearicons-glyph-bearicons/64/000000/external-faq-frequently-asked-questions-faq-bearicons-glyph-bearicons-10.png"/></a></li>
      
     </ul>
   </footer>

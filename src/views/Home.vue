@@ -21,14 +21,14 @@
           text-dark text-decoration-none
         "
       >
-        <img class="logo" src="../assets/logo.png" alt="" />
+        <img class="logo " src="../assets/logo.png" alt="" />
       </a>
 
       <div class="col-md-3 text-end">
-        <button onclick="document.getElementById('id02').style.display='block'">
+        <button class="btn btn-sm btn-outline-secondary" onclick="document.getElementById('id02').style.display='block'">
           Login
         </button>
-        <button onclick="document.getElementById('id01').style.display='block'">
+        <button class="btn btn-sm btn-outline-secondary" onclick="document.getElementById('id01').style.display='block'">
           Sign Up
         </button>
       </div>
@@ -42,7 +42,7 @@
         <div class="col-md-5 p-lg-5 mx-auto my-5">
           <h1 class="display-4 fw-normal text-white">ABOUT CRYPTR</h1>
           <p class="lead fw-normal text-white">
-            Post, like and comment on the<br />
+            Post, and comment on the<br />
             Cryptocurrency and NFTs you love.
           </p>
           <a
@@ -68,16 +68,58 @@
       title="Close Modal"
       >x</span
     >
-    <form class="modal-content" action="/action_page.php">
+    <form @submit.prevent="register" class="modal-content">
       <div class="container">
         <h1>Sign Up</h1>
 
         <hr />
+
+        <label for="email"><b>Full name</b></label>
+        <input
+          type="text"
+          placeholder="Full name"
+          name="email"
+          v-model="fullname"
+          required
+        />
+
+        <label for="email"><b>Phone number</b></label>
+        <input
+          type="text"
+          placeholder="Phone number"
+          name="email"
+          v-model="phone_number"
+          required
+        />
+
         <label for="email"><b>Email</b></label>
-        <input type="text" placeholder="Email" name="email" required />
+        <input
+          type="text"
+          placeholder="Email"
+          name="email"
+          v-model="email"
+          required
+        />
 
         <label for="psw"><b>Password</b></label>
-        <input type="password" placeholder="Password" name="psw" required />
+        <input
+          type="password"
+          placeholder="Password"
+          name="psw"
+          v-model="password"
+          required
+        />
+
+        <label for="img"><b>Profile picture</b></label>
+        <input
+          type="img"
+          placeholder="IMG URL"
+          name="image"
+          v-model="image"
+          required
+        />
+        <br />
+        <br />
 
         <label>
           <input
@@ -98,11 +140,13 @@
           <button
             type="button"
             onclick="document.getElementById('id01').style.display='none'"
-            class="cancelbtn"
+            class="c-btn btn-sm"
           >
             Cancel
           </button>
-          <button type="submit" class="signup">Sign Up</button>
+          <button type="submit" class="btn btn-sm">
+            Sign Up
+          </button>
         </div>
       </div>
     </form>
@@ -118,16 +162,16 @@
       title="Close Modal"
       >x</span
     >
-    <form class="modal-content" action="/action_page.php">
+    <form class="modal-content"  @submit.prevent="login">
       <div class="container">
         <h1>LOGIN</h1>
 
         <hr />
         <label for="email"><b>Email</b></label>
-        <input type="text" placeholder="Email" name="email" required />
-
+        <input type="text" v-model="email" placeholder="Email" name="email" required />
+ 
         <label for="psw"><b>Password</b></label>
-        <input type="password" placeholder="Password" name="psw" required />
+        <input type="password" v-model="password" placeholder="Password" name="psw" required />
 
         <label>
           <input
@@ -148,129 +192,195 @@
           <button
             type="button"
             onclick="document.getElementById('id02').style.display='none'"
-            class="cancelbtn"
+            class="c-btn btn-sm"
           >
             CANCEL
           </button>
-          <router-link  to="/feeds" class="signup">LOGIN</router-link>
+         <button type="submit" class="btn btn-sm">LOGIN</button>
         </div>
       </div>
     </form>
   </div>
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://cryptocoinspy.com/wp-content/uploads/2019/02/colorful-bitcoin-1-840x840.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://s3.amazonaws.com/bit-photos/large/6205202.jpeg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://s3.amazonaws.com/bit-photos/large/6205202.jpeg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
 
-  <br />
-  <br />
-  <br />
-  <br />
-  
   <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
     <div class="col">
       <div class="card shadow-sm">
         <br />
         <div class="cardProf">
           <i class="bi bi-person-square"></i>
-          <p>Exciller111</p>
+          <p>Exciller6969</p>
         </div>
         <img
           class="cardtop"
-          src="https://img.icons8.com/external-becris-lineal-color-becris/100/000000/external-blockchain-fintech-becris-lineal-color-becris.png"
+          src="https://www.quoteinspector.com/media/bitcoin/tarnished-cryptocurrrency-coins-wo.jpg"
         />
         <div class="card-body">
-          <p class="card-text">This is a bla bla bla</p>
+          <p class="card-text">Eth is boosting, Lets go to the moon!</p>
           <div class="d-flex justify-content-between align-items-center">
             <div class="btn-group">
               <button type="button" class="btn btn-sm btn-outline-secondary">
                 COMMENT
               </button>
-             
             </div>
-             <button type="button" class="btn btn-sm btn-outline-secondary">
-                BOOST
-              </button>
-           
+            <button type="button" class="btn btn-sm btn-outline-secondary">
+              BOOST
+            </button>
           </div>
         </div>
       </div>
     </div>
     <div class="col">
       <div class="card shadow-sm">
-           <br />
+        <br />
         <div class="cardProf">
           <i class="bi bi-person-square"></i>
           <p>BananaBread420</p>
         </div>
         <img
           class="cardtop"
-          src="https://img.icons8.com/cotton/64/000000/nft.png"
+          src="https://everythinginclick.com/wp-content/uploads/2021/03/Facebooks-New-Cryptocurrency_-Libra.png"
         />
         <div class="card-body">
-          <p class="card-text">This is a bla bla bla</p>
+          <p class="card-text">Have you heard about Facebooks new cryptocurrency?</p>
           <div class="d-flex justify-content-between align-items-center">
             <div class="btn-group">
               <button type="button" class="btn btn-sm btn-outline-secondary">
                 COMMENT
               </button>
-             
             </div>
-           <button type="button" class="btn btn-sm btn-outline-secondary">
-                BOOST
-              </button>
+            <button type="button" class="btn btn-sm btn-outline-secondary">
+              BOOST
+            </button>
           </div>
         </div>
       </div>
     </div>
     <div class="col">
       <div class="card shadow-sm">
-           <br />
+        <br />
         <div class="cardProf">
           <i class="bi bi-person-square"></i>
           <p>SethTheCreator69</p>
         </div>
         <img
           class="cardtop"
-          src="https://img.icons8.com/external-soft-fill-juicy-fish/60/000000/external-crypto-digital-nomad-soft-fill-soft-fill-juicy-fish.png"
+          src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fs3.tradingview.com%2Fc%2FCt7u2ia6_big.png&f=1&nofb=1"
         />
         <div class="card-body">
-          <p class="card-text">This is a bla bla bla</p>
+          <p class="card-text">Btc market is going down? what do you think</p>
           <div class="d-flex justify-content-between align-items-center">
             <div class="btn-group">
               <button type="button" class="btn btn-sm btn-outline-secondary">
                 COMMENT
               </button>
-         
             </div>
-         <button type="button" class="btn btn-sm btn-outline-secondary">
-                BOOST
-              </button>
+            <button type="button" class="btn btn-sm btn-outline-secondary">
+              BOOST
+            </button>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <br />
-  <br />
+  
 </template>
 
 <script>
 // @ is an alias to /src
 
 export default {
-  name: "Home",
-  components: {},
+  data() {
+    return {
+      fullname: "",
+      email: "",
+      phone_number: "",
+      password: "",
+      image: "",
+    };
+  },
+  methods: {
+    register() {
+      fetch("https://socialmediacryptr.herokuapp.com/users/", {
+        method: "POST",
+        body: JSON.stringify({
+          fullname: this.fullname,
+          email: this.email,
+          phone_number: this.phone_number,
+          password: this.password,
+          image: this.image,
+        }),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+      })
+        .then((response) => response.json())
+        .then((json) => {
+          alert("User registered");
+          localStorage.setItem("jwt", json.jwt);
+          this.$router.push({ fullname: "Login" });
+        })
+    },
+
+        login() {
+      fetch("https://socialmediacryptr.herokuapp.com/users/", {
+        method: "PATCH",
+        body: JSON.stringify({
+          email: this.email,
+          password: this.password,
+        }),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+      })
+        .then((response) => response.json())
+        .then((json) => {
+          localStorage.setItem("jwt", json.jwt);
+          alert("User logged in");
+          this.$router.push({ name: "Feeds" });
+        })
+        .catch((err) => {
+          alert("User does not exsist");
+        });
+    },
+
+  },
 };
 </script>
 
 
 <style scoped>
+
+.c-btn {
+  background-color: red !important;
+  color: white !important;
+}
+
+
 .position-relative {
   background-image: url(../assets/bit.jpg);
 }
-.cardtop {
-  height: 150px !important;
-  width: 150px !important;
-  display: block !important;
-  margin: auto !important;
-}
+
 
 * {
   box-sizing: border-box;
@@ -294,16 +404,6 @@ input[type="password"]:focus {
 }
 
 /* Set a style for all buttons */
-button {
-  background-color: #04aa6d;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 50%;
-  opacity: 0.9;
-}
 
 button:hover {
   opacity: 1;
@@ -385,4 +485,31 @@ hr {
     width: 100%;
   }
 }
+
+.btn {
+  background-color: #008037 !important;
+  color: white !important;
+
+}
+
+.cardtop {
+  height: 250px !important;
+  width: 250px !important;
+  display: block !important;
+  margin: auto !important;
+  border-radius: 5% !important;
+}
+
+
+
+.logo {
+  left:48%;
+  position:absolute !important;
+height:50px !important;
+width:50px !important;
+}
+
+
+
+
 </style>

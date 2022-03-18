@@ -21,13 +21,13 @@
           text-dark text-decoration-none
         "
       >
-           <button type="button" class="btn btn-sm btn-outline-secondary">
+           <router-link  to="newPost" class="btn btn-sm btn-outline-secondary">
                 +POST
-              </button>
+              </router-link >
 
-         <button type="button" class="btn btn-sm btn-outline-secondary">
+       <router-link  to="MyPosts" class="btn btn-sm btn-outline-secondary">
                 MY POSTS
-              </button>
+              </router-link >
 
         <img class="logo" src="../assets/logo.png" alt="" />
       </a>
@@ -47,30 +47,25 @@
 <br>
 <br>
 
-<!-- modal -->
-
-
-
 
 
 <!-- feed -->
 
 
-  
-  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-    <div class="col">
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 feeds">
+    <div class="col" v-for="posts of post" :key="posts._id">
       <div class="card shadow-sm">
         <br />
         <div class="cardProf">
           <i class="bi bi-person-square"></i>
-          <p>Exciller111</p>
+          <p>test</p>
         </div>
         <img
           class="cardtop"
-          src="https://img.icons8.com/ios-filled/50/000000/ethereum.png"/>
+          :src="posts.img">
       
         <div class="card-body">
-          <p class="card-text">This is a bla bla bla</p>
+          <p class="card-text">{{posts.description}}</p>
           <div class="d-flex justify-content-between align-items-center">
             <div class="btn-group">
               <button type="button" class="btn btn-sm btn-outline-secondary">
@@ -86,241 +81,38 @@
         </div>
       </div>
     </div>
-    <div class="col">
-      <div class="card shadow-sm">
-           <br />
-        <div class="cardProf">
-          <i class="bi bi-person-square"></i>
-          <p>BananaBread420</p>
-        </div>
-        <img
-          class="cardtop"
-          src="https://img.icons8.com/color/48/000000/bitcoin--v1.png"/>
-
-        <div class="card-body">
-          <p class="card-text">This is a bla bla bla</p>
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="btn-group">
-              <button type="button" class="btn btn-sm btn-outline-secondary">
-                COMMENT
-              </button>
-             
-            </div>
-           <button type="button" class="btn btn-sm btn-outline-secondary">
-                BOOST
-              </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card shadow-sm">
-           <br />
-        <div class="cardProf">
-          <i class="bi bi-person-square"></i>
-          <p>SethTheCreator69</p>
-        </div>
-        <img
-          class="cardtop"
-          src="https://img.icons8.com/external-soft-fill-juicy-fish/60/000000/external-crypto-digital-nomad-soft-fill-soft-fill-juicy-fish.png"
-        />
-        <div class="card-body">
-          <p class="card-text">This is a bla bla bla</p>
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="btn-group">
-              <button type="button" class="btn btn-sm btn-outline-secondary">
-                COMMENT
-              </button>
-         
-            </div>
-         <button type="button" class="btn btn-sm btn-outline-secondary">
-                BOOST
-              </button>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 
-  <br>
 
-   <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-    <div class="col">
-      <div class="card shadow-sm">
-        <br />
-        <div class="cardProf">
-          <i class="bi bi-person-square"></i>
-          <p>Exciller111</p>
-        </div>
-        <img
-          class="cardtop"
-          src="https://img.icons8.com/external-becris-lineal-color-becris/100/000000/external-blockchain-fintech-becris-lineal-color-becris.png"
-        />
-        <div class="card-body">
-          <p class="card-text">This is a bla bla bla</p>
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="btn-group">
-              <button type="button" class="btn btn-sm btn-outline-secondary">
-                COMMENT
-              </button>
-             
-            </div>
-             <button type="button" class="btn btn-sm btn-outline-secondary">
-                BOOST
-              </button>
-           
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card shadow-sm">
-           <br />
-        <div class="cardProf">
-          <i class="bi bi-person-square"></i>
-          <p>BananaBread420</p>
-        </div>
-        <img
-          class="cardtop"
-          src="https://img.icons8.com/cotton/64/000000/nft.png"
-        />
-        <div class="card-body">
-          <p class="card-text">This is a bla bla bla</p>
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="btn-group">
-              <button type="button" class="btn btn-sm btn-outline-secondary">
-                COMMENT
-              </button>
-             
-            </div>
-           <button type="button" class="btn btn-sm btn-outline-secondary">
-                BOOST
-              </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card shadow-sm">
-           <br />
-        <div class="cardProf">
-          <i class="bi bi-person-square"></i>
-          <p>SethTheCreator69</p>
-        </div>
-        <img
-          class="cardtop"
-          src="https://img.icons8.com/external-soft-fill-juicy-fish/60/000000/external-crypto-digital-nomad-soft-fill-soft-fill-juicy-fish.png"
-        />
-        <div class="card-body">
-          <p class="card-text">This is a bla bla bla</p>
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="btn-group">
-              <button type="button" class="btn btn-sm btn-outline-secondary">
-                COMMENT
-              </button>
-         
-            </div>
-         <button type="button" class="btn btn-sm btn-outline-secondary">
-                BOOST
-              </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <br>
 
-   <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-    <div class="col">
-      <div class="card shadow-sm">
-        <br />
-        <div class="cardProf">
-          <i class="bi bi-person-square"></i>
-          <p>Exciller111</p>
-        </div>
-        <img
-          class="cardtop"
-          src="https://img.icons8.com/external-becris-lineal-color-becris/100/000000/external-blockchain-fintech-becris-lineal-color-becris.png"
-        />
-        <div class="card-body">
-          <p class="card-text">This is a bla bla bla</p>
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="btn-group">
-              <button type="button" class="btn btn-sm btn-outline-secondary">
-                COMMENT
-              </button>
-             
-            </div>
-             <button type="button" class="btn btn-sm btn-outline-secondary">
-                BOOST
-              </button>
-           
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card shadow-sm">
-           <br />
-        <div class="cardProf">
-          <i class="bi bi-person-square"></i>
-          <p>BananaBread420</p>
-        </div>
-        <img
-          class="cardtop"
-          src="https://img.icons8.com/cotton/64/000000/nft.png"
-        />
-        <div class="card-body">
-          <p class="card-text">This is a bla bla bla</p>
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="btn-group">
-              <button type="button" class="btn btn-sm btn-outline-secondary">
-                COMMENT
-              </button>
-             
-            </div>
-           <button type="button" class="btn btn-sm btn-outline-secondary">
-                BOOST
-              </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card shadow-sm">
-           <br />
-        <div class="cardProf">
-          <i class="bi bi-person-square"></i>
-          <p>SethTheCreator69</p>
-        </div>
-        <img
-          class="cardtop"
-          src="https://img.icons8.com/external-soft-fill-juicy-fish/60/000000/external-crypto-digital-nomad-soft-fill-soft-fill-juicy-fish.png"
-        />
-        <div class="card-body">
-          <p class="card-text">This is a bla bla bla</p>
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="btn-group">
-              <button type="button" class="btn btn-sm btn-outline-secondary">
-                COMMENT
-              </button>
-         
-            </div>
-         <button type="button" class="btn btn-sm btn-outline-secondary">
-                BOOST
-              </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+
+  
 </template>
 
 <script>
 export default {
-
-}
+  data() {
+    return {
+      post: null,
+    };
+  },
+  mounted() {
+    fetch("https://socialmediacryptr.herokuapp.com/posts", {
+      method: "GET",
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+      },
+    })
+      .then((response) => response.json())
+      .then((json) => {
+        this.post = json;
+      })
+      .catch((err) => {
+        alert(console.log(err));
+      });
+  },
+};
 </script>
 
 <style scoped>
@@ -335,11 +127,22 @@ export default {
 
 
 .logo {
-      margin: 0 auto !important;
-  display: block !important;
-  position: absolute !important;
-  left: calc((100% - 195px) / 2);
-  z-index: -100000 !important;
+  left:48%;
+  position:absolute !important;
+height:50px !important;
+width:50px !important;
+}
+
+
+.btn {
+  background-color: #008037 !important;
+  color: white !important;
+
+}
+
+
+.card {
+  background-color:white !important;
 }
 
 </style>
