@@ -204,13 +204,13 @@
 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="https://cryptocoinspy.com/wp-content/uploads/2019/02/colorful-bitcoin-1-840x840.jpg" class="d-block w-100" alt="...">
+      <img src="../assets/Cara1.png" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="https://s3.amazonaws.com/bit-photos/large/6205202.jpeg" class="d-block w-100" alt="...">
+      <img src="../assets/Cara2.png" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="https://s3.amazonaws.com/bit-photos/large/6205202.jpeg" class="d-block w-100" alt="...">
+      <img src="../assets/Cara3.png" class="d-block w-100" alt="...">
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -381,6 +381,11 @@ export default {
   background-image: url(../assets/bit.jpg);
 }
 
+
+.carousel-item {
+  height: 850px !important
+
+}
 
 * {
   box-sizing: border-box;
