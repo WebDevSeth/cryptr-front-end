@@ -225,12 +225,9 @@
 
   <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
     <div class="col">
-      <div class="card shadow-sm">
+      <div class="card">
         <br />
-        <div class="cardProf">
-          <i class="bi bi-person-square"></i>
-          <p>Exciller6969</p>
-        </div>
+ 
         <img
           class="cardtop"
           src="https://www.quoteinspector.com/media/bitcoin/tarnished-cryptocurrrency-coins-wo.jpg"
@@ -253,10 +250,7 @@
     <div class="col">
       <div class="card shadow-sm">
         <br />
-        <div class="cardProf">
-          <i class="bi bi-person-square"></i>
-          <p>BananaBread420</p>
-        </div>
+  
         <img
           class="cardtop"
           src="https://everythinginclick.com/wp-content/uploads/2021/03/Facebooks-New-Cryptocurrency_-Libra.png"
@@ -279,10 +273,7 @@
     <div class="col">
       <div class="card shadow-sm">
         <br />
-        <div class="cardProf">
-          <i class="bi bi-person-square"></i>
-          <p>SethTheCreator69</p>
-        </div>
+  
         <img
           class="cardtop"
           src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fs3.tradingview.com%2Fc%2FCt7u2ia6_big.png&f=1&nofb=1"
@@ -342,6 +333,8 @@ export default {
         })
     },
 
+  
+
         login() {
       fetch("https://socialmediacryptr.herokuapp.com/users/", {
         method: "PATCH",
@@ -400,6 +393,19 @@ input[type="password"] {
   border: none;
   background: #f1f1f1;
 }
+
+.carousel-control-prev-icon {
+
+  background-color: black;
+    border-radius:50%;
+}
+
+.carousel-control-next-icon {
+
+  background-color: black;
+  border-radius:50%;
+}
+
 
 /* Add a background color when the inputs get focus */
 input[type="text"]:focus,
@@ -506,12 +512,18 @@ hr {
 }
 
 
+.card {
+  background-color: grey !important;
+  color:white !important;
+}
+
+
 
 .logo {
   left:48%;
   position:absolute !important;
-height:50px !important;
-width:50px !important;
+height:55px !important;
+width:55px !important;
 }
 
 

@@ -24,6 +24,7 @@
            <router-link  to="newPost" class="btn btn-sm btn-outline-secondary">
                 +POST
               </router-link >
+              
 
        <router-link  to="MyPosts" class="btn btn-sm btn-outline-secondary">
                 MY POSTS
@@ -36,6 +37,10 @@
 
           <router-link  to="Profile" class="btn btn-sm btn-outline-secondary">
                 MY PROFILE
+              </router-link >
+
+                 <router-link  to="Contact" class="btn btn-sm btn-outline-secondary">
+                CONTACT US
               </router-link >
 
      <router-link  to="/" class="btn btn-sm btn-outline-secondary">SIGN OUT</router-link>
@@ -57,8 +62,10 @@
       <div class="card shadow-sm">
         <br />
         <div class="cardProf">
-          <i class="bi bi-person-square"></i>
-          <p>test</p>
+
+
+         <p class="card-text">{{posts.title}}</p>
+
         </div>
         <img
           class="cardtop"
@@ -142,7 +149,9 @@ width:50px !important;
 
 
 .card {
-  background-color:white !important;
+  background-color:grey !important;
+  color: white !important;
 }
+
 
 </style>

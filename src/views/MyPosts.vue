@@ -72,8 +72,8 @@ export default {
 .logo {
   left:48%;
   position:absolute !important;
-height:50px !important;
-width:50px !important;
+height:55px !important;
+width:55px !important;
 }
 
 
